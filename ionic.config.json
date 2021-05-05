@@ -1,0 +1,7 @@
+{
+  "name": "NoctemEx",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

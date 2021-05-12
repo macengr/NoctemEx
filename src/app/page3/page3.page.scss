@@ -1,6 +1,9 @@
 ion-title {
   color: #4599c7;
-  font-weight: 700;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 60px;
+  padding-top: 50px;
 }
 
 button {
@@ -17,12 +20,10 @@ button {
   position: absolute;
   left: 0;
   right: 0;
-  // top: 30%;
-  // transform: translateY(-50%);
 
   .instructions {
     text-align: left;
-    border: 1px solid #222223;
+    border: 1px solid gray;
     padding: 15px;
     margin: 15px;
   }
@@ -48,7 +49,7 @@ button {
       text-align: center;
       padding-top: 25px;
       padding-bottom: 25px;
-      border: 0.5px solid #222223;
+      border: 0.5px solid gray;
       width: 100px;
       height: 350px;
       margin-right: 15px;
@@ -79,12 +80,17 @@ button {
     .forward {
       width: 20%;
       border-left: 0.5px solid black;
+      color: black;
       padding-top: 10px;
     }
     .backward {
       width: 20%;
-      border-right: 0.5px solid black;
+      border-left: 0.5px solid black;
       padding-top: 10px;
+      background-color: #4599c7;
+      color: white;
+      border-radius: 20px 0px 0px 20px;
+      border: none;
     }
     .page-no {
       width: 60%;

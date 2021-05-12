@@ -1,28 +1,31 @@
-ion-title {
-  color: #4599c7;
-  font-weight: 700;
-}
+ion-header {
+  ion-title {
+    color: #4599c7;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 60px;
+    padding-top: 50px;
+  }
 
-button {
-  float: right;
-  text-transform: uppercase;
-  border: 1px solid white;
-  background-color: black;
-  padding: 10px 15px;
-  margin-top: auto;
-  margin-right: 10px;
+  button {
+    float: right;
+    text-transform: uppercase;
+    border: 1px solid white;
+    background-color: black;
+    padding: 10px 10px;
+    margin-top: auto;
+    margin-right: 10px;
+  }
 }
 
 #container {
   position: absolute;
   left: 0;
   right: 0;
-  // top: 30%;
-  // transform: translateY(-50%);
 
   .instructions {
     text-align: left;
-    border: 1px solid #222223;
+    border: 1px solid gray;
     padding: 15px;
     margin: 15px;
   }
@@ -34,7 +37,8 @@ button {
 
     .labels {
       width: 300px;
-      padding-top: 25px;
+      padding-top: 5px;
+      font-size: 18px;
 
       ul {
         li {
@@ -48,18 +52,10 @@ button {
       text-align: center;
       padding-top: 25px;
       padding-bottom: 25px;
-      border: 0.5px solid #222223;
+      border: 0.5px solid gray;
       width: 100px;
       height: 350px;
       margin-right: 15px;
-
-      input[type="range"][orient="vertical"] {
-        writing-mode: bt-lr; /* IE */
-        -webkit-appearance: slider-vertical; /* WebKit */
-        width: 20px;
-        height: 300px;
-        padding: 5px;
-      }
     }
   }
 
@@ -80,11 +76,27 @@ button {
       width: 20%;
       border-left: 0.5px solid black;
       padding-top: 10px;
+      background-color: #4599c7;
+      color: white;
+      border-radius: 0px 20px 20px 0px;
+      border: none;
     }
     .backward {
       width: 20%;
       border-right: 0.5px solid black;
       padding-top: 10px;
+      color: #000;
+    }
+    button:disabled.forward,
+    button[disabled].forward {
+      border-radius: 20px;
+      width: 20%;
+      background-color: #0d293f;
+      color: black;
+      border-left: 0.5px solid black;
+      border-radius: 0px 20px 20px 0px;
+      padding-top: 10px;
+      border: none;
     }
     .page-no {
       width: 60%;

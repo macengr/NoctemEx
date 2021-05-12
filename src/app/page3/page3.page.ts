@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MatSliderChange } from '@angular/material/slider';
 
 @Component({
   selector: 'app-page3',
@@ -10,6 +11,11 @@ export class Page3Page implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onInputChange(event: MatSliderChange) {
+    console.log('This is emitted as the thumb slides');
+    console.log(event.value);
   }
 
 }

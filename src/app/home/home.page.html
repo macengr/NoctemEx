@@ -29,14 +29,15 @@
         </ul>
       </div>
       <div class="range">
-          <input class="input-range" orient="vertical" type="range" step="0.5" value="5" min="1" max="10">
+          <mat-slider vertical class="input-range" type="range" step="0.5" value="5" 
+            min="1" max="10" (input)="onInputChange($event)"></mat-slider>
           <span class="range-value"></span>
       </div>
      </div>
      <div class="nav-btns">
        <div class="backward"><ion-icon name="arrow-back"  end></ion-icon></div>
        <div class="page-no">Page 1 of 3</div>
-       <div class="forward" [routerLink]="['/page2']"><ion-icon name="arrow-forward"  end></ion-icon></div>
+       <button class="forward" [disabled]="valueSelected !== true" [routerLink]="['/page2']"><ion-icon name="arrow-forward"  end></ion-icon></button>
      </div>
   </div>
 </ion-content>

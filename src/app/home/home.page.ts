@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatSliderChange } from '@angular/material/slider';
 // import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
 
 @Component({
@@ -8,6 +9,7 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  valueSelected = false;
   // private database: SQLiteObject;
 
   constructor() {
@@ -24,6 +26,10 @@ export class HomePage {
     //   .catch(e => console.log(e));
   }
 
-
+  onInputChange(event: MatSliderChange) {
+    console.log('This is emitted as the thumb slides');
+    this.valueSelected = true;
+    console.log(event.value);
+  }
 
 }

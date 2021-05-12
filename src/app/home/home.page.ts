@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatSliderChange } from '@angular/material/slider';
-// import { SQLite, SQLiteObject } from '@ionic-native/sqlite/ngx';
+import { SharingService } from '../services/sharing-service.service';
 
 @Component({
   selector: 'app-home',
@@ -9,27 +9,27 @@ import { MatSliderChange } from '@angular/material/slider';
 })
 export class HomePage {
 
+  data: string[] = [];
   valueSelected = false;
-  // private database: SQLiteObject;
+  current_sleepiness: string;
 
-  constructor() {
-    // private sqlite: SQLite
-    // this.sqlite.create({
-    //   name: 'data.db',
-    //   location: 'default'
-    // })
-    //   .then((db: SQLiteObject) => {
-    //     db.executeSql('create table danceMoves(name VARCHAR(32))', [])
-    //       .then(() => console.log('Executed SQL'))
-    //       .catch(e => console.log(e));
-    //   })
-    //   .catch(e => console.log(e));
+  constructor(private sharingService: SharingService) {
   }
 
   onInputChange(event: MatSliderChange) {
-    console.log('This is emitted as the thumb slides');
     this.valueSelected = true;
-    console.log(event.value);
+    if(event.value > 0 && event.value < 2.5) {
+      this.current_sleepiness = 'Extremely Alert';
+    } else if(event.value > 2 && event.value < 4.5) {
+      this.current_sleepiness = 'Alert';
+    } else if(event.value > 4 && event.value < 6.5) {
+      this.current_sleepiness = 'Neither alert nor sleepy';
+    } else if(event.value > 6 && event.value < 8.5) {
+      this.current_sleepiness = 'Sleepy but no difficulty remaining awake';
+    } else if(event.value > 8 && event.value < 10.5) {
+      this.current_sleepiness = 'Extremely sleepy';
+    };
+    this.data.push(this.current_sleepiness);
+    this.sharingService.setData(this.data);
   }
-
 }

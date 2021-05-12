@@ -33,7 +33,7 @@
     <div class="nav-btns">
       <button class="backward" [routerLink]="['/home']"><ion-icon name="arrow-back"  end></ion-icon></button>
       <div class="page-no">Page 2 of 3</div>
-      <button class="forward" [disabled]="valueSelected !== true" [routerLink]="['/page3']" (onclick)="onNext()"><ion-icon name="arrow-forward"  end></ion-icon></button>
+      <button class="forward" [disabled]="valueSelected !== true" [routerLink]="['/page3']" (click)="onNext()"><ion-icon name="arrow-forward"  end></ion-icon></button>
     </div>
   </div>
 </ion-content>

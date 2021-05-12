@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      VIBE
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">VIBE</ion-title>
+      <button>Log out</button>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container">
+    <div class="instructions">
+      <strong>What kept you from sleeping last night. Select as many as you like.</strong>
+    </div>
+    <div class="nav-btns">
+      <div class="backward" [routerLink]="['/home']"><ion-icon name="arrow-back"  end></ion-icon></div>
+      <div class="page-no">Page 2 of 3</div>
+      <div class="forward" [routerLink]="['/page3']"><ion-icon name="arrow-forward"  end></ion-icon></div>
+    </div>
+  </div>
+</ion-content>

@@ -19,21 +19,21 @@
       <strong>What kept you from sleeping last night. Select as many as you like.</strong>
     </div>
     <div class="selection-group">
-      <div class="selections">Racing Thoughts</div>
-      <div class="selections">Anxiety</div>
-      <div class="selections">Nightmares</div>
-      <div class="selections">Pop/Soda</div>
-      <div class="selections">Light</div>
-      <div class="selections">Stress</div>
-      <div class="selections">Noise</div>
-      <div class="selections">Work</div>
-      <div class="selections">Spending time with Friends</div>
-      <div class="selections">Obligations</div>
+      <div class="selections" [class.selected] = "is1Selected == true" (click) = "check1Selected()">Racing Thoughts</div>
+      <div class="selections" [class.selected] = "is2Selected == true" (click) = "check2Selected()">Anxiety</div>
+      <div class="selections" [class.selected] = "is3Selected == true" (click) = "check3Selected()">Nightmares</div>
+      <div class="selections" [class.selected] = "is4Selected == true" (click) = "check4Selected()">Pop/Soda</div>
+      <div class="selections" [class.selected] = "is5Selected == true" (click) = "check5Selected()">Light</div>
+      <div class="selections" [class.selected] = "is6Selected == true" (click) = "check6Selected()">Stress</div>
+      <div class="selections" [class.selected] = "is7Selected == true" (click) = "check7Selected()">Noise</div>
+      <div class="selections" [class.selected] = "is8Selected == true" (click) = "check8Selected()">Work</div>
+      <div class="selections" [class.selected] = "is9Selected == true" (click) = "check9Selected()">Spending time with Friends</div>
+      <div class="selections" [class.selected] = "is10Selected == true" (click) = "check10Selected()">Obligations</div>
     </div>
     <div class="nav-btns">
       <button class="backward" [routerLink]="['/home']"><ion-icon name="arrow-back"  end></ion-icon></button>
       <div class="page-no">Page 2 of 3</div>
-      <button class="forward" [disabled]="valueSelected !== true" [routerLink]="['/page3']"><ion-icon name="arrow-forward"  end></ion-icon></button>
+      <button class="forward" [disabled]="valueSelected !== true" [routerLink]="['/page3']" (onclick)="onNext()"><ion-icon name="arrow-forward"  end></ion-icon></button>
     </div>
   </div>
 </ion-content>
